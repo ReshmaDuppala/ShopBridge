@@ -1,0 +1,18 @@
+<div class="app-container">
+    <form *ngIf="!loading" [formGroup]="addItemForm" (ngSubmit)="onSubmit()">
+        <div class="input">
+            <label class="label">Name:</label>
+            <input class="inputElement" type="text" formControlName="name">
+        </div>
+        <div class="input">
+            <label class="label">Description:</label>
+            <input class="inputElement" type="text" formControlName="description">
+        </div>
+        <div class="input">
+            <label class="label">Price:</label>
+            <input class="inputElement" type="number" formControlName="price">
+        </div>
+        <button [disabled]="addItemForm.invalid">SUBMIT</button>
+    </form>
+    <div *ngIf="loading" class="loader"></div>
+</div>

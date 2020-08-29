@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-container',
+  templateUrl: './container.component.html',
+  styleUrls: ['./container.component.scss']
+})
+export class ContainerComponent {
+
+  public itemList;
+  constructor() { }
+
+
+  public getItemList(list) {
+    this.itemList = list;
+  }
+
+}

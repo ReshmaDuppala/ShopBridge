@@ -1,0 +1,15 @@
+<div class="app-container">
+<table *ngIf="!loading">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let item of itemList">
+        <td [innerText]= 'item.name' [routerLink]="['/details', item.id]"></td>
+        <td [innerText] = 'item.price'></td>
+        <td><button [innerText]="'REMOVE'" (click)="removeItem(item.id)"></button></td>
+    </tr>
+</table>
+<div *ngIf="loading" class="loader"></div>
+</div>
